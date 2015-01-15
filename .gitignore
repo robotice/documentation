@@ -1,0 +1,5 @@
+*.pyc
+config.yml
+celerybeat-schedule
+celerybeat.pid
+robotice.egg-info

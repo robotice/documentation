@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Command Line Interface &mdash; Robotice Project 0.2.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.2.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Robotice Project 0.2.0 documentation" href="../index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li><a href="../index.html">Robotice Project 0.2.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="command-line-interface">
+<span id="cli-test"></span><h1>Command Line Interface<a class="headerlink" href="#command-line-interface" title="Permalink to this headline">¶</a></h1>
+<p>If you have problem with Robotice you can use cli for debugging.</p>
+<div class="section" id="welcome">
+<h2>Welcome !<a class="headerlink" href="#welcome" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash"><div class="highlight"><pre>python robotice-cli.py
+</pre></div>
+</div>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">usage</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">robotice-cli.py [-h] [-c CONF] [-w WORKERCONF] [-l NODEINFO]</span>
+                       <span class="l-Scalar-Plain">[-i INSPECT] [-s]</span>
+
+     <span class="l-Scalar-Plain">______       _                _</span>
+    <span class="l-Scalar-Plain">(_____ \     | |           _  (_)</span>
+     <span class="l-Scalar-Plain">_____) )___ | |__   ___ _| |_ _  ____ _____</span>
+    <span class="l-Scalar-Plain">|  __  // _ \|  _ \ / _ (_   _) |/ ___) ___ |</span>
+    <span class="l-Scalar-Plain">| |  \ \ |_| | |_) ) |_| || |_| ( (___| ____|</span>
+    <span class="l-Scalar-Plain">|_|   |_\___/|____/ \___/  \__)_|\____)_____)</span>
+
+
+<span class="l-Scalar-Plain">optional arguments</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">-h, --help            show this help message and exit</span>
+  <span class="l-Scalar-Plain">-c CONF, --conf CONF  default</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">/srv/robotice/conf</span>
+  <span class="l-Scalar-Plain">-w WORKERCONF, --workerconf WORKERCONF</span>
+                        <span class="l-Scalar-Plain">default</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">/srv/robotice</span>
+  <span class="l-Scalar-Plain">-l NODEINFO, --nodeinfo NODEINFO</span>
+                        <span class="l-Scalar-Plain">-l ubuntu1</span>
+  <span class="l-Scalar-Plain">-i INSPECT, --inspect INSPECT</span>
+                        <span class="l-Scalar-Plain">print worker configuration -i reasoner</span>
+  <span class="l-Scalar-Plain">-s, --status          print robotice status</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="worker-config">
+<h2>Worker config<a class="headerlink" href="#worker-config" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash"><div class="highlight"><pre>python robotice-cli.py -i reasoner
+</pre></div>
+</div>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="p-Indicator">{</span>
+  <span class="s">&quot;system_name&quot;</span><span class="p-Indicator">:</span> <span class="s">&quot;box&quot;</span><span class="p-Indicator">,</span>
+  <span class="s">&quot;cpu_arch&quot;</span><span class="p-Indicator">:</span> <span class="s">&quot;x86_64&quot;</span><span class="p-Indicator">,</span>
+  <span class="s">&quot;name&quot;</span><span class="p-Indicator">:</span> <span class="s">&quot;rabbitmq1.box.robotice.cz&quot;</span><span class="p-Indicator">,</span>
+  <span class="s">&quot;database&quot;</span><span class="p-Indicator">:</span> <span class="p-Indicator">{</span>
+    <span class="s">&quot;engine&quot;</span><span class="p-Indicator">:</span> <span class="s">&quot;redis&quot;</span><span class="p-Indicator">,</span>
+    <span class="s">&quot;host&quot;</span><span class="p-Indicator">:</span> <span class="s">&quot;localhost&quot;</span><span class="p-Indicator">,</span>
+    <span class="s">&quot;port&quot;</span><span class="p-Indicator">:</span> <span class="nv">6379</span>
+  <span class="p-Indicator">},</span>
+  <span class="s">&quot;broker&quot;</span><span class="p-Indicator">:</span> <span class="s">&quot;amqp://robotice:robotice@localhost:5672//robotice&quot;</span><span class="p-Indicator">,</span>
+  <span class="s">&quot;metering&quot;</span><span class="p-Indicator">:</span> <span class="p-Indicator">{</span>
+    <span class="s">&quot;host&quot;</span><span class="p-Indicator">:</span> <span class="s">&quot;localhost&quot;</span><span class="p-Indicator">,</span>
+    <span class="s">&quot;sample_rate&quot;</span><span class="p-Indicator">:</span> <span class="nv">1</span><span class="p-Indicator">,</span>
+    <span class="s">&quot;port&quot;</span><span class="p-Indicator">:</span> <span class="nv">8125</span>
+  <span class="p-Indicator">},</span>
+  <span class="s">&quot;environment&quot;</span><span class="p-Indicator">:</span> <span class="s">&quot;dev&quot;</span><span class="p-Indicator">,</span>
+  <span class="s">&quot;os_family&quot;</span><span class="p-Indicator">:</span> <span class="s">&quot;Debian&quot;</span><span class="p-Indicator">,</span>
+  <span class="s">&quot;debug&quot;</span><span class="p-Indicator">:</span> <span class="nv">true</span><span class="p-Indicator">,</span>
+  <span class="s">&quot;dsn&quot;</span><span class="p-Indicator">:</span> <span class="s">&quot;http://##:##@host/number&quot;</span>
+<span class="p-Indicator">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="robotice-status">
+<h2>Robotice status<a class="headerlink" href="#robotice-status" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash"><div class="highlight"><pre>python robotice-cli.py -s
+</pre></div>
+</div>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">Monitor      ........   :-)</span>
+<span class="l-Scalar-Plain">Planner      ........   :-)</span>
+<span class="l-Scalar-Plain">Reasoner     ........   :-)</span>
+<span class="l-Scalar-Plain">Reactor      ........   :-)</span>
+
+
+<span class="l-Scalar-Plain">Sensors      ........   2</span>
+<span class="l-Scalar-Plain">Actuators    ........   9</span>
+<span class="l-Scalar-Plain">Systems      ........   3</span>
+<span class="l-Scalar-Plain">Plans        ........   1</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="robotice-node-info">
+<h2>Robotice node info<a class="headerlink" href="#robotice-node-info" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash"><div class="highlight"><pre>python robotice-cli.py --nodeinfo ubuntu1 | ubuntu1.box.robotice.cz
+</pre></div>
+</div>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="p-Indicator">{</span><span class="s">&#39;start&#39;</span><span class="p-Indicator">:</span> <span class="nv">datetime.datetime(2014</span><span class="p-Indicator">,</span> <span class="nv">2</span><span class="p-Indicator">,</span> <span class="nv">1</span><span class="p-Indicator">,</span> <span class="nv">0</span><span class="p-Indicator">,</span> <span class="nv">0)</span><span class="p-Indicator">,</span> <span class="s">&#39;sensors&#39;</span><span class="p-Indicator">:</span> <span class="p-Indicator">[{</span><span class="s">&#39;device&#39;</span><span class="p-Indicator">:</span> <span class="s">&#39;dummy1&#39;</span><span class="p-Indicator">,</span> <span class="s">&#39;metric&#39;</span><span class="p-Indicator">:</span> <span class="s">&#39;random1&#39;</span><span class="p-Indicator">,</span> <span class="s">&#39;plan&#39;</span><span class="p-Indicator">:</span> <span class="s">&#39;water_humidity1&#39;</span><span class="p-Indicator">},</span> <span class="p-Indicator">{</span><span class="s">&#39;device&#39;</span><span class="p-Indicator">:</span> <span class="s">&#39;hygro_case1_ao&#39;</span><span class="p-Indicator">,</span> <span class="s">&#39;metric&#39;</span><span class="p-Indicator">:</span> <span class="s">&#39;humidity&#39;</span><span class="p-Indicator">,</span> <span class="s">&#39;plan&#39;</span><span class="p-Indicator">:</span> <span class="s">&#39;water_humidity2&#39;</span><span class="p-Indicator">}],</span> <span class="s">&#39;name&#39;</span><span class="p-Indicator">:</span> <span class="s">&#39;ubuntu1&#39;</span><span class="p-Indicator">,</span> <span class="s">&#39;plan&#39;</span><span class="p-Indicator">:</span> <span class="s">&#39;hklab_box1&#39;</span><span class="p-Indicator">,</span> <span class="s">&#39;actuators&#39;</span><span class="p-Indicator">:</span> <span class="p-Indicator">[{</span><span class="s">&#39;device&#39;</span><span class="p-Indicator">:</span> <span class="s">&#39;dummy1&#39;</span><span class="p-Indicator">,</span> <span class="s">&#39;metric&#39;</span><span class="p-Indicator">:</span> <span class="s">&#39;random&#39;</span><span class="p-Indicator">,</span> <span class="s">&#39;plan&#39;</span><span class="p-Indicator">:</span> <span class="s">&#39;water1&#39;</span><span class="p-Indicator">},</span> <span class="p-Indicator">{</span><span class="s">&#39;device&#39;</span><span class="p-Indicator">:</span> <span class="s">&#39;relay3&#39;</span><span class="p-Indicator">,</span> <span class="s">&#39;plan&#39;</span><span class="p-Indicator">:</span> <span class="s">&#39;light1&#39;</span><span class="p-Indicator">},</span> <span class="p-Indicator">{</span><span class="s">&#39;device&#39;</span><span class="p-Indicator">:</span> <span class="s">&#39;relay2&#39;</span><span class="p-Indicator">,</span> <span class="s">&#39;plan&#39;</span><span class="p-Indicator">:</span> <span class="s">&#39;temp1&#39;</span><span class="p-Indicator">}]}</span>
+<span class="p-Indicator">{</span><span class="s">&#39;actuators&#39;</span><span class="p-Indicator">:</span> <span class="p-Indicator">[{</span><span class="s">&#39;device&#39;</span><span class="p-Indicator">:</span> <span class="s">&#39;relay&#39;</span><span class="p-Indicator">,</span> <span class="s">&#39;type&#39;</span><span class="p-Indicator">:</span> <span class="s">&#39;relay&#39;</span><span class="p-Indicator">,</span> <span class="s">&#39;name&#39;</span><span class="p-Indicator">:</span> <span class="s">&#39;relay1&#39;</span><span class="p-Indicator">,</span> <span class="s">&#39;port&#39;</span><span class="p-Indicator">:</span> <span class="s">&#39;P9_20&#39;</span><span class="p-Indicator">}],</span> <span class="s">&#39;host&#39;</span><span class="p-Indicator">:</span> <span class="s">&#39;ubuntu1&#39;</span><span class="p-Indicator">,</span> <span class="s">&#39;sensors&#39;</span><span class="p-Indicator">:</span> <span class="p-Indicator">[{</span><span class="s">&#39;device&#39;</span><span class="p-Indicator">:</span> <span class="s">&#39;dummy&#39;</span><span class="p-Indicator">,</span> <span class="s">&#39;type&#39;</span><span class="p-Indicator">:</span> <span class="s">&#39;dummy&#39;</span><span class="p-Indicator">,</span> <span class="s">&#39;name&#39;</span><span class="p-Indicator">:</span> <span class="s">&#39;dummy2&#39;</span><span class="p-Indicator">,</span> <span class="s">&#39;port&#39;</span><span class="p-Indicator">:</span> <span class="s">&#39;bcm18&#39;</span><span class="p-Indicator">},</span> <span class="p-Indicator">{</span><span class="s">&#39;device&#39;</span><span class="p-Indicator">:</span> <span class="s">&#39;dummy&#39;</span><span class="p-Indicator">,</span> <span class="s">&#39;type&#39;</span><span class="p-Indicator">:</span> <span class="s">&#39;dummy&#39;</span><span class="p-Indicator">,</span> <span class="s">&#39;name&#39;</span><span class="p-Indicator">:</span> <span class="s">&#39;dummy1&#39;</span><span class="p-Indicator">,</span> <span class="s">&#39;port&#39;</span><span class="p-Indicator">:</span> <span class="s">&#39;bcm18&#39;</span><span class="p-Indicator">}]}</span>
+<span class="p-Indicator">{</span><span class="s">&#39;actuators&#39;</span><span class="p-Indicator">:</span> <span class="p-Indicator">[{</span><span class="s">&#39;cycles&#39;</span><span class="p-Indicator">:</span> <span class="p-Indicator">[{</span><span class="s">&#39;start&#39;</span><span class="p-Indicator">:</span> <span class="nv">6400</span><span class="p-Indicator">,</span> <span class="s">&#39;end&#39;</span><span class="p-Indicator">:</span> <span class="nv">80000</span><span class="p-Indicator">,</span> <span class="s">&#39;value&#39;</span><span class="p-Indicator">:</span> <span class="nv">1</span><span class="p-Indicator">}],</span> <span class="s">&#39;name&#39;</span><span class="p-Indicator">:</span> <span class="s">&#39;light1&#39;</span><span class="p-Indicator">},</span> <span class="p-Indicator">{</span><span class="s">&#39;cycles&#39;</span><span class="p-Indicator">:</span> <span class="p-Indicator">[{</span><span class="s">&#39;start&#39;</span><span class="p-Indicator">:</span> <span class="nv">6400</span><span class="p-Indicator">,</span> <span class="s">&#39;end&#39;</span><span class="p-Indicator">:</span> <span class="nv">80000</span><span class="p-Indicator">,</span> <span class="s">&#39;value&#39;</span><span class="p-Indicator">:</span> <span class="nv">0</span><span class="p-Indicator">}],</span> <span class="s">&#39;name&#39;</span><span class="p-Indicator">:</span> <span class="s">&#39;water1&#39;</span><span class="p-Indicator">},</span> <span class="p-Indicator">{</span><span class="s">&#39;cycles&#39;</span><span class="p-Indicator">:</span> <span class="p-Indicator">[{</span><span class="s">&#39;start&#39;</span><span class="p-Indicator">:</span> <span class="nv">0</span><span class="p-Indicator">,</span> <span class="s">&#39;end&#39;</span><span class="p-Indicator">:</span> <span class="nv">59</span><span class="p-Indicator">,</span> <span class="s">&#39;value&#39;</span><span class="p-Indicator">:</span> <span class="nv">1</span><span class="p-Indicator">},</span> <span class="p-Indicator">{</span><span class="s">&#39;start&#39;</span><span class="p-Indicator">:</span> <span class="nv">60</span><span class="p-Indicator">,</span> <span class="s">&#39;end&#39;</span><span class="p-Indicator">:</span> <span class="nv">599</span><span class="p-Indicator">,</span> <span class="s">&#39;value&#39;</span><span class="p-Indicator">:</span> <span class="nv">0</span><span class="p-Indicator">},</span> <span class="p-Indicator">{</span><span class="s">&#39;start&#39;</span><span class="p-Indicator">:</span> <span class="nv">600</span><span class="p-Indicator">,</span> <span class="s">&#39;end&#39;</span><span class="p-Indicator">:</span> <span class="nv">699</span><span class="p-Indicator">,</span> <span class="s">&#39;value&#39;</span><span class="p-Indicator">:</span> <span class="nv">1</span><span class="p-Indicator">},</span> <span class="p-Indicator">{</span><span class="s">&#39;start&#39;</span><span class="p-Indicator">:</span> <span class="nv">700</span><span class="p-Indicator">,</span> <span class="s">&#39;end&#39;</span><span class="p-Indicator">:</span> <span class="nv">1399</span><span class="p-Indicator">,</span> <span class="s">&#39;value&#39;</span><span class="p-Indicator">:</span> <span class="nv">0</span><span class="p-Indicator">},</span> <span class="p-Indicator">{</span><span class="s">&#39;start&#39;</span><span class="p-Indicator">:</span> <span class="nv">1400</span><span class="p-Indicator">,</span> <span class="s">&#39;end&#39;</span><span class="p-Indicator">:</span> <span class="nv">1499</span><span class="p-Indicator">,</span> <span class="s">&#39;value&#39;</span><span class="p-Indicator">:</span> <span class="nv">0</span><span class="p-Indicator">},</span> <span class="p-Indicator">{</span><span class="s">&#39;start&#39;</span><span class="p-Indicator">:</span> <span class="nv">1500</span><span class="p-Indicator">,</span> <span class="s">&#39;end&#39;</span><span class="p-Indicator">:</span> <span class="nv">1739</span><span class="p-Indicator">,</span> <span class="s">&#39;value&#39;</span><span class="p-Indicator">:</span> <span class="nv">0</span><span class="p-Indicator">},</span> <span class="p-Indicator">{</span><span class="s">&#39;start&#39;</span><span class="p-Indicator">:</span> <span class="nv">1740</span><span class="p-Indicator">,</span> <span class="s">&#39;end&#39;</span><span class="p-Indicator">:</span> <span class="nv">1800</span><span class="p-Indicator">,</span> <span class="s">&#39;value&#39;</span><span class="p-Indicator">:</span> <span class="nv">1</span><span class="p-Indicator">}],</span> <span class="s">&#39;name&#39;</span><span class="p-Indicator">:</span> <span class="s">&#39;water2&#39;</span><span class="p-Indicator">}],</span> <span class="s">&#39;sensors&#39;</span><span class="p-Indicator">:</span> <span class="p-Indicator">[{</span><span class="s">&#39;cycles&#39;</span><span class="p-Indicator">:</span> <span class="p-Indicator">[{</span><span class="s">&#39;start&#39;</span><span class="p-Indicator">:</span> <span class="nv">0</span><span class="p-Indicator">,</span> <span class="s">&#39;end&#39;</span><span class="p-Indicator">:</span> <span class="nv">599</span><span class="p-Indicator">,</span> <span class="s">&#39;value_high&#39;</span><span class="p-Indicator">:</span> <span class="nv">25</span><span class="p-Indicator">,</span> <span class="s">&#39;value_low&#39;</span><span class="p-Indicator">:</span> <span class="nv">0</span><span class="p-Indicator">},</span> <span class="p-Indicator">{</span><span class="s">&#39;start&#39;</span><span class="p-Indicator">:</span> <span class="nv">600</span><span class="p-Indicator">,</span> <span class="s">&#39;end&#39;</span><span class="p-Indicator">:</span> <span class="nv">1199</span><span class="p-Indicator">,</span> <span class="s">&#39;value_high&#39;</span><span class="p-Indicator">:</span> <span class="nv">50</span><span class="p-Indicator">,</span> <span class="s">&#39;value_low&#39;</span><span class="p-Indicator">:</span> <span class="nv">30</span><span class="p-Indicator">},</span> <span class="p-Indicator">{</span><span class="s">&#39;start&#39;</span><span class="p-Indicator">:</span> <span class="nv">1200</span><span class="p-Indicator">,</span> <span class="s">&#39;end&#39;</span><span class="p-Indicator">:</span> <span class="nv">1800</span><span class="p-Indicator">,</span> <span class="s">&#39;value_high&#39;</span><span class="p-Indicator">:</span> <span class="nv">55</span><span class="p-Indicator">,</span> <span class="s">&#39;value_low&#39;</span><span class="p-Indicator">:</span> <span class="nv">35</span><span class="p-Indicator">}],</span> <span class="s">&#39;name&#39;</span><span class="p-Indicator">:</span> <span class="s">&#39;temp1&#39;</span><span class="p-Indicator">},</span> <span class="p-Indicator">{</span><span class="s">&#39;cycles&#39;</span><span class="p-Indicator">:</span> <span class="p-Indicator">[{</span><span class="s">&#39;start&#39;</span><span class="p-Indicator">:</span> <span class="nv">0</span><span class="p-Indicator">,</span> <span class="s">&#39;end&#39;</span><span class="p-Indicator">:</span> <span class="nv">1800</span><span class="p-Indicator">,</span> <span class="s">&#39;value_high&#39;</span><span class="p-Indicator">:</span> <span class="nv">2000</span><span class="p-Indicator">,</span> <span class="s">&#39;value_low&#39;</span><span class="p-Indicator">:</span> <span class="nv">50</span><span class="p-Indicator">}],</span> <span class="s">&#39;name&#39;</span><span class="p-Indicator">:</span> <span class="s">&#39;hygro2&#39;</span><span class="p-Indicator">},</span> <span class="p-Indicator">{</span><span class="s">&#39;cycles&#39;</span><span class="p-Indicator">:</span> <span class="p-Indicator">[{</span><span class="s">&#39;start&#39;</span><span class="p-Indicator">:</span> <span class="nv">0</span><span class="p-Indicator">,</span> <span class="s">&#39;end&#39;</span><span class="p-Indicator">:</span> <span class="nv">1800</span><span class="p-Indicator">,</span> <span class="s">&#39;value_high&#39;</span><span class="p-Indicator">:</span> <span class="nv">0</span><span class="p-Indicator">,</span> <span class="s">&#39;value_low&#39;</span><span class="p-Indicator">:</span> <span class="nv">1</span><span class="p-Indicator">}],</span> <span class="s">&#39;name&#39;</span><span class="p-Indicator">:</span> <span class="s">&#39;hygro1&#39;</span><span class="p-Indicator">},</span> <span class="p-Indicator">{</span><span class="s">&#39;cycles&#39;</span><span class="p-Indicator">:</span> <span class="p-Indicator">[{</span><span class="s">&#39;start&#39;</span><span class="p-Indicator">:</span> <span class="nv">0</span><span class="p-Indicator">,</span> <span class="s">&#39;end&#39;</span><span class="p-Indicator">:</span> <span class="nv">899</span><span class="p-Indicator">,</span> <span class="s">&#39;value_high&#39;</span><span class="p-Indicator">:</span> <span class="nv">30</span><span class="p-Indicator">,</span> <span class="s">&#39;value_low&#39;</span><span class="p-Indicator">:</span> <span class="nv">20</span><span class="p-Indicator">},</span> <span class="p-Indicator">{</span><span class="s">&#39;start&#39;</span><span class="p-Indicator">:</span> <span class="nv">900</span><span class="p-Indicator">,</span> <span class="s">&#39;end&#39;</span><span class="p-Indicator">:</span> <span class="nv">1800</span><span class="p-Indicator">,</span> <span class="s">&#39;value_high&#39;</span><span class="p-Indicator">:</span> <span class="nv">65</span><span class="p-Indicator">,</span> <span class="s">&#39;value_low&#39;</span><span class="p-Indicator">:</span> <span class="nv">35</span><span class="p-Indicator">}],</span> <span class="s">&#39;name&#39;</span><span class="p-Indicator">:</span> <span class="s">&#39;air_humidity1&#39;</span><span class="p-Indicator">},</span> <span class="p-Indicator">{</span><span class="s">&#39;cycles&#39;</span><span class="p-Indicator">:</span> <span class="p-Indicator">[{</span><span class="s">&#39;start&#39;</span><span class="p-Indicator">:</span> <span class="nv">0</span><span class="p-Indicator">,</span> <span class="s">&#39;end&#39;</span><span class="p-Indicator">:</span> <span class="nv">899</span><span class="p-Indicator">,</span> <span class="s">&#39;value_high&#39;</span><span class="p-Indicator">:</span> <span class="nv">30</span><span class="p-Indicator">,</span> <span class="s">&#39;value_low&#39;</span><span class="p-Indicator">:</span> <span class="nv">20</span><span class="p-Indicator">},</span> <span class="p-Indicator">{</span><span class="s">&#39;start&#39;</span><span class="p-Indicator">:</span> <span class="nv">900</span><span class="p-Indicator">,</span> <span class="s">&#39;end&#39;</span><span class="p-Indicator">:</span> <span class="nv">1800</span><span class="p-Indicator">,</span> <span class="s">&#39;value_high&#39;</span><span class="p-Indicator">:</span> <span class="nv">65</span><span class="p-Indicator">,</span> <span class="s">&#39;value_low&#39;</span><span class="p-Indicator">:</span> <span class="nv">35</span><span class="p-Indicator">}],</span> <span class="s">&#39;name&#39;</span><span class="p-Indicator">:</span> <span class="s">&#39;terra_humidity1&#39;</span><span class="p-Indicator">},</span> <span class="p-Indicator">{</span><span class="s">&#39;cycles&#39;</span><span class="p-Indicator">:</span> <span class="p-Indicator">[{</span><span class="s">&#39;start&#39;</span><span class="p-Indicator">:</span> <span class="nv">0</span><span class="p-Indicator">,</span> <span class="s">&#39;end&#39;</span><span class="p-Indicator">:</span> <span class="nv">899</span><span class="p-Indicator">,</span> <span class="s">&#39;value&#39;</span><span class="p-Indicator">:</span> <span class="nv">1</span><span class="p-Indicator">},</span> <span class="p-Indicator">{</span><span class="s">&#39;start&#39;</span><span class="p-Indicator">:</span> <span class="nv">900</span><span class="p-Indicator">,</span> <span class="s">&#39;end&#39;</span><span class="p-Indicator">:</span> <span class="nv">1800</span><span class="p-Indicator">,</span> <span class="s">&#39;value&#39;</span><span class="p-Indicator">:</span> <span class="nv">0</span><span class="p-Indicator">}],</span> <span class="s">&#39;name&#39;</span><span class="p-Indicator">:</span> <span class="s">&#39;light2&#39;</span><span class="p-Indicator">},</span> <span class="p-Indicator">{</span><span class="s">&#39;cycles&#39;</span><span class="p-Indicator">:</span> <span class="p-Indicator">[{</span><span class="s">&#39;start&#39;</span><span class="p-Indicator">:</span> <span class="nv">0</span><span class="p-Indicator">,</span> <span class="s">&#39;end&#39;</span><span class="p-Indicator">:</span> <span class="nv">59</span><span class="p-Indicator">,</span> <span class="s">&#39;value&#39;</span><span class="p-Indicator">:</span> <span class="nv">1</span><span class="p-Indicator">},</span> <span class="p-Indicator">{</span><span class="s">&#39;start&#39;</span><span class="p-Indicator">:</span> <span class="nv">60</span><span class="p-Indicator">,</span> <span class="s">&#39;end&#39;</span><span class="p-Indicator">:</span> <span class="nv">599</span><span class="p-Indicator">,</span> <span class="s">&#39;value&#39;</span><span class="p-Indicator">:</span> <span class="nv">0</span><span class="p-Indicator">},</span> <span class="p-Indicator">{</span><span class="s">&#39;start&#39;</span><span class="p-Indicator">:</span> <span class="nv">600</span><span class="p-Indicator">,</span> <span class="s">&#39;end&#39;</span><span class="p-Indicator">:</span> <span class="nv">699</span><span class="p-Indicator">,</span> <span class="s">&#39;value&#39;</span><span class="p-Indicator">:</span> <span class="nv">1</span><span class="p-Indicator">},</span> <span class="p-Indicator">{</span><span class="s">&#39;start&#39;</span><span class="p-Indicator">:</span> <span class="nv">700</span><span class="p-Indicator">,</span> <span class="s">&#39;end&#39;</span><span class="p-Indicator">:</span> <span class="nv">1399</span><span class="p-Indicator">,</span> <span class="s">&#39;value&#39;</span><span class="p-Indicator">:</span> <span class="nv">0</span><span class="p-Indicator">},</span> <span class="p-Indicator">{</span><span class="s">&#39;start&#39;</span><span class="p-Indicator">:</span> <span class="nv">1400</span><span class="p-Indicator">,</span> <span class="s">&#39;end&#39;</span><span class="p-Indicator">:</span> <span class="nv">1499</span><span class="p-Indicator">,</span> <span class="s">&#39;value&#39;</span><span class="p-Indicator">:</span> <span class="nv">0</span><span class="p-Indicator">},</span> <span class="p-Indicator">{</span><span class="s">&#39;start&#39;</span><span class="p-Indicator">:</span> <span class="nv">1500</span><span class="p-Indicator">,</span> <span class="s">&#39;end&#39;</span><span class="p-Indicator">:</span> <span class="nv">1739</span><span class="p-Indicator">,</span> <span class="s">&#39;value&#39;</span><span class="p-Indicator">:</span> <span class="nv">0</span><span class="p-Indicator">},</span> <span class="p-Indicator">{</span><span class="s">&#39;start&#39;</span><span class="p-Indicator">:</span> <span class="nv">1740</span><span class="p-Indicator">,</span> <span class="s">&#39;end&#39;</span><span class="p-Indicator">:</span> <span class="nv">1800</span><span class="p-Indicator">,</span> <span class="s">&#39;value&#39;</span><span class="p-Indicator">:</span> <span class="nv">1</span><span class="p-Indicator">}],</span> <span class="s">&#39;name&#39;</span><span class="p-Indicator">:</span> <span class="s">&#39;water1&#39;</span><span class="p-Indicator">}],</span> <span class="s">&#39;description&#39;</span><span class="p-Indicator">:</span> <span class="s">&#39;simple</span><span class="nv"> </span><span class="s">test</span><span class="nv"> </span><span class="s">box&#39;</span><span class="p-Indicator">,</span> <span class="s">&#39;name&#39;</span><span class="p-Indicator">:</span> <span class="s">&#39;hklab_box1&#39;</span><span class="p-Indicator">,</span> <span class="s">&#39;cycle&#39;</span><span class="p-Indicator">:</span> <span class="nv">1800</span><span class="p-Indicator">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Command Line Interface</a><ul>
+<li><a class="reference internal" href="#welcome">Welcome !</a></li>
+<li><a class="reference internal" href="#worker-config">Worker config</a></li>
+<li><a class="reference internal" href="#robotice-status">Robotice status</a></li>
+<li><a class="reference internal" href="#robotice-node-info">Robotice node info</a></li>
+</ul>
+</li>
+</ul>
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/support/cli.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li><a href="../index.html">Robotice Project 0.2.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014-2015, Ales Komarek, Michael Kuty.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>
