@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Measuring Temperature &mdash; Robotice Project 0.2.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/flasky.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.2.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Robotice Project 0.2.0 documentation" href="../../index.html" />
+   
+  
+  <link media="only screen and (max-device-width: 480px)" href="../../_static/small_flask.css" type= "text/css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li><a href="../../index.html">Robotice Project 0.2.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="measuring-temperature">
+<h1>Measuring Temperature<a class="headerlink" href="#measuring-temperature" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="mcp9808-i2c-temperature-sensor">
+<h2>MCP9808 - I2C Temperature Sensor<a class="headerlink" href="#mcp9808-i2c-temperature-sensor" title="Permalink to this headline">¶</a></h2>
+<p>This I2C digital temperature sensor is one of the more accurate/precise we&#8217;ve ever seen, with a typical accuracy of ±0.25°C over the sensor&#8217;s -40°C to +125°C range and precision of +0.0625°C. They work great with any microcontroller using standard i2c. There are 3 address pins so you can connect up to 8 to a single I2C bus without address collisions. Best of all, a wide voltage range makes is usable with 2.7V to 5.5V logic.</p>
+<img alt="../../_images/mcp9808.jpg" src="../../_images/mcp9808.jpg" />
+<div class="section" id="more-information">
+<h3>More information<a class="headerlink" href="#more-information" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="https://learn.adafruit.com/mcp9808-temperature-sensor-python-library">https://learn.adafruit.com/mcp9808-temperature-sensor-python-library</a> MCP9808 Temperature Sensor Python Library</li>
+</ul>
+</div>
+<div class="section" id="where-to-buy">
+<h3>Where to buy<a class="headerlink" href="#where-to-buy" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="http://www.adafruit.com/products/1782">http://www.adafruit.com/products/1782</a> $5</li>
+</ul>
+</div>
+</div>
+<div class="section" id="ds18b20-gpio-temperature-sensor">
+<h2>DS18B20 - GPIO Temperature Sensor<a class="headerlink" href="#ds18b20-gpio-temperature-sensor" title="Permalink to this headline">¶</a></h2>
+<p>The DS18B20 is a rather useful sensor because you can read more than one of them using the same GPIO pin. Device is able to recognise the input from each separate sensor.</p>
+<img alt="../../_images/ds18b20.jpg" src="../../_images/ds18b20.jpg" />
+<div class="section" id="id1">
+<h3>More information<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="http://datasheets.maximintegrated.com/en/ds/DS18B20.pdf">http://datasheets.maximintegrated.com/en/ds/DS18B20.pdf</a> - DS18B20 Programmable Resolution 1-Wire Digital Thermometer</li>
+<li><a class="reference external" href="http://learn.adafruit.com/measuring-temperature-with-a-beaglebone-black">http://learn.adafruit.com/measuring-temperature-with-a-beaglebone-black</a> [BeagleBone]</li>
+<li><a class="reference external" href="http://designandmake.designspark.com/eng/projects/35/view/stage/design">http://designandmake.designspark.com/eng/projects/35/view/stage/design</a></li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h3>Where to buy<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>DS18B20 <a class="reference external" href="http://www.gme.cz/teplotni-cidla-s-cislicovym-vystupem/ds18b20-p530-067/">http://www.gme.cz/teplotni-cidla-s-cislicovym-vystupem/ds18b20-p530-067/</a> za cca 55 Kc</li>
+<li>TMP36 <a class="reference external" href="http://www.adafruit.com/products/165">http://www.adafruit.com/products/165</a> cca 40 Kč</li>
+</ul>
+</div>
+</div>
+<div class="section" id="tmp36-ain-temperature-sensor">
+<h2>TMP36 - AIN Temperature Sensor<a class="headerlink" href="#tmp36-ain-temperature-sensor" title="Permalink to this headline">¶</a></h2>
+<p>Low cost temperature sensor.</p>
+<img alt="../../_images/tmp36.jpg" src="../../_images/tmp36.jpg" />
+<div class="section" id="id3">
+<h3>More information<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="http://www.picotech.com/applications/pt100.html">http://www.picotech.com/applications/pt100.html</a></li>
+<li><a class="reference external" href="http://openenergymonitor.org/emon/buildingblocks/rtd-temperature-sensing">http://openenergymonitor.org/emon/buildingblocks/rtd-temperature-sensing</a></li>
+<li>TMP36 Temperature Sensor <a class="reference external" href="http://learn.adafruit.com/tmp36-temperature-sensor">http://learn.adafruit.com/tmp36-temperature-sensor</a></li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h3>Where to buy<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="http://www.adafruit.com/products/165">http://www.adafruit.com/products/165</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="lm335-ain-temperature-sensor">
+<h2>LM335 - AIN Temperature Sensor<a class="headerlink" href="#lm335-ain-temperature-sensor" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id5">
+<h3>More information<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>GardenBot - The Soil Temperature Sensor <a class="reference external" href="http://gardenbot.org/howTo/soilTemp/">http://gardenbot.org/howTo/soilTemp/</a> [Arduino]</li>
+</ul>
+</div>
+<div class="section" id="id6">
+<h3>Where to buy<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="http://www.gme.cz/teplotni-cidla-s-analogovym-vystupem/lm335-p530-003/">http://www.gme.cz/teplotni-cidla-s-analogovym-vystupem/lm335-p530-003/</a> za cca 17 Kc</li>
+</ul>
+</div>
+</div>
+<div class="section" id="platinum-resistance-thermometers">
+<h2>Platinum Resistance Thermometers<a class="headerlink" href="#platinum-resistance-thermometers" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id7">
+<h3>More information<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="http://www.picotech.com/applications/pt100.html">http://www.picotech.com/applications/pt100.html</a></li>
+<li><a class="reference external" href="http://openenergymonitor.org/emon/buildingblocks/rtd-temperature-sensing">http://openenergymonitor.org/emon/buildingblocks/rtd-temperature-sensing</a></li>
+</ul>
+</div>
+<div class="section" id="id8">
+<h3>Where to buy<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>...</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Measuring Temperature</a><ul>
+<li><a class="reference internal" href="#mcp9808-i2c-temperature-sensor">MCP9808 - I2C Temperature Sensor</a><ul>
+<li><a class="reference internal" href="#more-information">More information</a></li>
+<li><a class="reference internal" href="#where-to-buy">Where to buy</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#ds18b20-gpio-temperature-sensor">DS18B20 - GPIO Temperature Sensor</a><ul>
+<li><a class="reference internal" href="#id1">More information</a></li>
+<li><a class="reference internal" href="#id2">Where to buy</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#tmp36-ain-temperature-sensor">TMP36 - AIN Temperature Sensor</a><ul>
+<li><a class="reference internal" href="#id3">More information</a></li>
+<li><a class="reference internal" href="#id4">Where to buy</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#lm335-ain-temperature-sensor">LM335 - AIN Temperature Sensor</a><ul>
+<li><a class="reference internal" href="#id5">More information</a></li>
+<li><a class="reference internal" href="#id6">Where to buy</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#platinum-resistance-thermometers">Platinum Resistance Thermometers</a><ul>
+<li><a class="reference internal" href="#id7">More information</a></li>
+<li><a class="reference internal" href="#id8">Where to buy</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/hardware/sensor/temperature.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2014-2015, Ales Komarek, Michael Kuty.
+    </div>
+  </body>
+</html>

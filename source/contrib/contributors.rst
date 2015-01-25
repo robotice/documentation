@@ -4,18 +4,23 @@
 Contributors
 ============
 
+This project is open and everyone is welcome to cooperate.
 
-How to contribute?
-------------------
+Project Members
+===============
 
-You can help further the development of **Robotice** or **Boardie** by reporting bugs, submitting documentation, patches, with monetary or hardware donations.
-
-Lead developers
+Core team
 --------------
-* Aleš Komárek (mail@newt.cz) <newt.cz>
-* Michael Kutý (mail@majklk.cz) <majklk.cz>
+
+* Aleš Komárek / architect
+* Michael Kutý / lead developer
 
 Contributors (in alphabetical order)
 ------------------------------------
 
-* No contribution
+* Martin Vacula / C ape
+
+How to contribute?
+==================
+
+You can help further the development of **Robotice** by reporting bugs, submitting documentation, patches, along with monetary or hardware donations.

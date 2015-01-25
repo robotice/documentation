@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Salt installation &mdash; Robotice Project 0.2.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/flasky.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.2.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Robotice Project 0.2.0 documentation" href="../index.html" />
+   
+  
+  <link media="only screen and (max-device-width: 480px)" href="../_static/small_flask.css" type= "text/css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li><a href="../index.html">Robotice Project 0.2.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="salt-installation">
+<h1>Salt installation<a class="headerlink" href="#salt-installation" title="Permalink to this headline">¶</a></h1>
+<p>Sample pillars</p>
+<div class="section" id="robotice-controller-node">
+<h2>Robotice controller node<a class="headerlink" href="#robotice-controller-node" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">robotice</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">planner</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">enabled</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+    <span class="l-Scalar-Plain">broker</span><span class="p-Indicator">:</span>
+      <span class="l-Scalar-Plain">engine</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">rabbitmq</span>
+      <span class="l-Scalar-Plain">user</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">robotice</span>
+      <span class="l-Scalar-Plain">password</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">nksfdfdewe3234</span>
+      <span class="l-Scalar-Plain">host</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">localhost</span>
+      <span class="l-Scalar-Plain">port</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">5672</span>
+      <span class="l-Scalar-Plain">virtual_host</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">/robotice</span>
+    <span class="l-Scalar-Plain">database</span><span class="p-Indicator">:</span>
+      <span class="l-Scalar-Plain">engine</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">redis</span>
+      <span class="l-Scalar-Plain">host</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">localhost</span>
+      <span class="l-Scalar-Plain">port</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">6379</span>
+  <span class="l-Scalar-Plain">reasoner</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">enabled</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+    <span class="l-Scalar-Plain">plan</span><span class="p-Indicator">:</span>
+      <span class="l-Scalar-Plain">source</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">git</span>
+      <span class="l-Scalar-Plain">address</span><span class="p-Indicator">:</span> <span class="s">&#39;git@repo.domain.com:robotice/plan-default.git&#39;</span>
+      <span class="l-Scalar-Plain">rev</span><span class="p-Indicator">:</span> <span class="s">&#39;develop&#39;</span>
+    <span class="l-Scalar-Plain">broker</span><span class="p-Indicator">:</span>
+      <span class="l-Scalar-Plain">engine</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">rabbitmq</span>
+      <span class="l-Scalar-Plain">user</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">robotice</span>
+      <span class="l-Scalar-Plain">password</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">nksfdfdewe3234</span>
+      <span class="l-Scalar-Plain">host</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">localhost</span>
+      <span class="l-Scalar-Plain">virtual_host</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">/robotice</span>
+    <span class="l-Scalar-Plain">database</span><span class="p-Indicator">:</span>
+      <span class="l-Scalar-Plain">engine</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">redis</span>
+      <span class="l-Scalar-Plain">host</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">localhost</span>
+      <span class="l-Scalar-Plain">port</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">6379</span>
+    <span class="l-Scalar-Plain">metering</span><span class="p-Indicator">:</span>
+      <span class="l-Scalar-Plain">engine</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">statsd</span>
+      <span class="l-Scalar-Plain">host</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">localhost</span>
+      <span class="l-Scalar-Plain">port</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">8125</span>
+      <span class="l-Scalar-Plain">sample_rate</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">1</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="robotice-monitor-node">
+<h2>Robotice monitor node<a class="headerlink" href="#robotice-monitor-node" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">monitor</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">enabled</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+  <span class="l-Scalar-Plain">broker</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">engine</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">rabbitmq</span>
+    <span class="l-Scalar-Plain">user</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">robotice</span>
+    <span class="l-Scalar-Plain">password</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">nksfdfdewe3234</span>
+    <span class="l-Scalar-Plain">host</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">localhost</span>
+    <span class="l-Scalar-Plain">virtual_host</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">/robotice</span>
+  <span class="l-Scalar-Plain">database</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">engine</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">redis</span>
+    <span class="l-Scalar-Plain">host</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">localhost</span>
+    <span class="l-Scalar-Plain">port</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">6379</span>
+  <span class="l-Scalar-Plain">devices</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">sispm</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">dht</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">relay</span>
+<span class="l-Scalar-Plain">reactor</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">enabled</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+  <span class="l-Scalar-Plain">database</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">engine</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">redis</span>
+    <span class="l-Scalar-Plain">host</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">localhost</span>
+    <span class="l-Scalar-Plain">port</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">6379</span>
+  <span class="l-Scalar-Plain">broker</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">engine</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">rabbitmq</span>
+    <span class="l-Scalar-Plain">user</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">robotice</span>
+    <span class="l-Scalar-Plain">password</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">nksfdfdewe3234</span>
+    <span class="l-Scalar-Plain">host</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">localhost</span>
+    <span class="l-Scalar-Plain">virtual_host</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">/robotice</span>
+  <span class="l-Scalar-Plain">devices</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">sispm</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">relay</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="robotice-controller-node-with-redis-broker">
+<h2>Robotice controller node with redis broker<a class="headerlink" href="#robotice-controller-node-with-redis-broker" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">robotice</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">planner</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">enabled</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+    <span class="l-Scalar-Plain">broker</span><span class="p-Indicator">:</span>
+      <span class="l-Scalar-Plain">engine</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">redis</span>
+      <span class="l-Scalar-Plain">host</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">localhost</span>
+      <span class="l-Scalar-Plain">port</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">6379</span>
+      <span class="l-Scalar-Plain">number</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">0</span>
+    <span class="l-Scalar-Plain">database</span><span class="p-Indicator">:</span>
+      <span class="l-Scalar-Plain">engine</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">redis</span>
+      <span class="l-Scalar-Plain">host</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">localhost</span>
+      <span class="l-Scalar-Plain">port</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">6379</span>
+      <span class="l-Scalar-Plain">number</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">1</span>
+  <span class="l-Scalar-Plain">reasoner</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">enabled</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+    <span class="l-Scalar-Plain">plan</span><span class="p-Indicator">:</span>
+      <span class="l-Scalar-Plain">source</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">git</span>
+      <span class="l-Scalar-Plain">address</span><span class="p-Indicator">:</span> <span class="s">&#39;git@repo.domain.com:robotice/plan-default.git&#39;</span>
+      <span class="l-Scalar-Plain">rev</span><span class="p-Indicator">:</span> <span class="s">&#39;develop&#39;</span>
+    <span class="l-Scalar-Plain">broker</span><span class="p-Indicator">:</span>
+      <span class="l-Scalar-Plain">engine</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">redis</span>
+      <span class="l-Scalar-Plain">host</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">localhost</span>
+      <span class="l-Scalar-Plain">port</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">6379</span>
+      <span class="l-Scalar-Plain">number</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">0</span>
+    <span class="l-Scalar-Plain">database</span><span class="p-Indicator">:</span>
+      <span class="l-Scalar-Plain">engine</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">redis</span>
+      <span class="l-Scalar-Plain">host</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">localhost</span>
+      <span class="l-Scalar-Plain">port</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">6379</span>
+      <span class="l-Scalar-Plain">number</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">1</span>
+    <span class="l-Scalar-Plain">metering</span><span class="p-Indicator">:</span>
+      <span class="l-Scalar-Plain">engine</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">statsd</span>
+      <span class="l-Scalar-Plain">host</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">localhost</span>
+      <span class="l-Scalar-Plain">port</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">8125</span>
+      <span class="l-Scalar-Plain">sample_rate</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Salt installation</a><ul>
+<li><a class="reference internal" href="#robotice-controller-node">Robotice controller node</a></li>
+<li><a class="reference internal" href="#robotice-monitor-node">Robotice monitor node</a></li>
+<li><a class="reference internal" href="#robotice-controller-node-with-redis-broker">Robotice controller node with redis broker</a></li>
+</ul>
+</li>
+</ul>
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/install/salt.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2014-2015, Ales Komarek, Michael Kuty.
+    </div>
+  </body>
+</html>

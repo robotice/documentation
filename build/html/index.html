@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Robotice Project &mdash; Robotice Project 0.2.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/flasky.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.2.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Robotice Project 0.2.0 documentation" href="#" />
+   
+  
+  <link media="only screen and (max-device-width: 480px)" href="_static/small_flask.css" type= "text/css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li><a href="#">Robotice Project 0.2.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="robotice-project">
+<h1>Robotice Project<a class="headerlink" href="#robotice-project" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Robotice is autonomous agent-based system aimed to solve common life problems. It makes use of modern single-board computers as well as virtual resources of cloud for scalable computing.</p>
+<div class="section" id="architecture">
+<h3>Architecture<a class="headerlink" href="#architecture" title="Permalink to this headline">¶</a></h3>
+<p>Robotice consists of two separate major systems. Where Robotice Agent System is a standalone entity and Robotice Control System is designed to operate multiple agent systems.</p>
+<ul class="simple">
+<li><strong>Robotice Agent System</strong> - A light-weight system for interfacing physical sensors and actuators, capable of autonomous operations with a little need for CPU and memory resources.</li>
+<li><strong>Robotice Control System</strong> - A multitenant system for controlling multiple Robotice Agent Systems, it provides UI for planning and device manipulation and provide compute-intense services for i.e. motion or face detections.</li>
+</ul>
+</div>
+<div class="section" id="use-cases">
+<h3>Use Cases<a class="headerlink" href="#use-cases" title="Permalink to this headline">¶</a></h3>
+<p>Robotice can be used in many ways, the following illustrate some of the major areas of focus.</p>
+<ul class="simple">
+<li><strong>Gardening Automation</strong> - Integrate various hardware sensors and actuators to support gardening automation. Automate light cycles with watering cycles based on actual soil moisture or predefined plan.</li>
+<li><strong>Security and Surveillance</strong> - Interact with cameras to capture and evaluate the data for alarms or other actions. Interact with  PIR sensors for motion or humidity sensor or buttons for opening detection.</li>
+<li><strong>Intelligent Living</strong> - Improve quality of life by controlling the living environment and adjusting the parameters like temperature, light or humidity according to outside conditions or personal preference. Or use it as a simple meteorological station.</li>
+<li><strong>ICT Service Monitoring</strong> - React to operations problems (heavy loads, hardware malfunctions) by communicating with external monitoring and configuration management systems.</li>
+</ul>
+</div>
+<div class="section" id="more-information">
+<h3>More information<a class="headerlink" href="#more-information" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference internal" href="intro/overview.html"><em>Architectural Overview</em></a> - Read more about Robotice architecture</li>
+<li><a class="reference internal" href="intro/screenshot.html"><em>User Interface Screenshots</em></a> - Real-work GUI screenshots</li>
+</ul>
+</div>
+</div>
+<div class="section" id="hardware-support">
+<h2>Hardware Support<a class="headerlink" href="#hardware-support" title="Permalink to this headline">¶</a></h2>
+<p>Robotice uses Linux operating system to access physical devices. Suitable Linux can be installed on wide range of supported devices.</p>
+<div class="section" id="computing-devices">
+<h3>Computing Devices<a class="headerlink" href="#computing-devices" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference internal" href="hardware/computer/arm.html"><em>Single-board ARM Computers</em></a></li>
+<li><a class="reference internal" href="hardware/computer/intel.html"><em>Intel x86/64 Computers</em></a></li>
+<li><a class="reference internal" href="hardware/computer/usb.html"><em>USB Extensions</em></a></li>
+</ul>
+</div>
+<div class="section" id="physical-actuators">
+<h3>Physical Actuators<a class="headerlink" href="#physical-actuators" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference internal" href="hardware/actuator/electric_switch.html"><em>Electric Switch</em></a></li>
+<li><a class="reference internal" href="hardware/actuator/electric_modulation.html"><em>Electric Modulation</em></a></li>
+<li><a class="reference internal" href="hardware/actuator/display_oled.html"><em>OLED Display</em></a></li>
+</ul>
+</div>
+<div class="section" id="physical-sensors">
+<h3>Physical Sensors<a class="headerlink" href="#physical-sensors" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference internal" href="hardware/sensor/air_humidity.html"><em>Air Humidity</em></a> - ratio of water vapor pressure to the equilibrium vapor pressure of water (DHT11, DHT22, HTU19D)</li>
+<li><a class="reference internal" href="hardware/sensor/air_pressure.html"><em>Air Pressure</em></a> (BMP)</li>
+<li><a class="reference internal" href="hardware/sensor/distance.html"><em>Distance</em></a></li>
+<li><a class="reference internal" href="hardware/sensor/electric_button.html"><em>Electric Button</em></a></li>
+<li><a class="reference internal" href="hardware/sensor/electric_current.html"><em>Electric Current</em></a></li>
+<li><a class="reference internal" href="hardware/sensor/light_luminosity.html"><em>Light/Luminosity</em></a> (CdS, TSL2561, TSL2591)</li>
+<li><a class="reference internal" href="hardware/sensor/liquid_flow.html"><em>Liquid Flow</em></a></li>
+<li><a class="reference internal" href="hardware/sensor/liquid_level.html"><em>Liquid Level</em></a></li>
+<li><a class="reference internal" href="hardware/sensor/liquid_ph.html"><em>Liquid pH</em></a> - acidity or basicity of an aqueous solution (Atlas Scientific pH Kit)</li>
+<li><a class="reference internal" href="hardware/sensor/soil_moisture.html"><em>Soil Moisture</em></a> - the water content in soil (HygroMeter)</li>
+<li><a class="reference internal" href="hardware/sensor/temperature.html"><em>Temperature</em></a> (DHT11, DHT22, HTU19D, TMP36, DS18)</li>
+</ul>
+</div>
+</div>
+<div class="section" id="contribution">
+<h2>Contribution<a class="headerlink" href="#contribution" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="contrib/git.html"><em>Source code</em></a></li>
+<li><a class="reference internal" href="contrib/new_device.html"><em>How to add support for new device/sensor/actuator</em></a></li>
+<li><a class="reference internal" href="contrib/contributors.html"><em>Contributors</em></a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Robotice Project</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a><ul>
+<li><a class="reference internal" href="#architecture">Architecture</a></li>
+<li><a class="reference internal" href="#use-cases">Use Cases</a></li>
+<li><a class="reference internal" href="#more-information">More information</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#hardware-support">Hardware Support</a><ul>
+<li><a class="reference internal" href="#computing-devices">Computing Devices</a></li>
+<li><a class="reference internal" href="#physical-actuators">Physical Actuators</a></li>
+<li><a class="reference internal" href="#physical-sensors">Physical Sensors</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#contribution">Contribution</a></li>
+</ul>
+</li>
+</ul>
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/index.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2014-2015, Ales Komarek, Michael Kuty.
+    </div>
+  </body>
+</html>
