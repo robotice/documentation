@@ -4,8 +4,8 @@
 Robotice Project
 ================
 
-Overview
-===========
+Quick Overview
+==============
 
 Robotice is autonomous agent-based system aimed to solve common life problems. It makes use of modern single-board computers as well as virtual resources of cloud for scalable computing.
 
@@ -45,12 +45,6 @@ Computing Devices
 * :doc:`Intel x86/64 Computers <hardware/computer/intel>`
 * :doc:`USB Extensions<hardware/computer/usb>`
 
-Physical Actuators
-----------------
-
-* :doc:`Electric Switch <hardware/actuator/electric_switch>`
-* :doc:`Electric Modulation <hardware/actuator/electric_modulation>`
-* :doc:`OLED Display <hardware/actuator/display_oled>`
 
 Physical Sensors
 ----------------
@@ -60,12 +54,19 @@ Physical Sensors
 * :doc:`Distance<hardware/sensor/distance>`
 * :doc:`Electric Button<hardware/sensor/electric_button>`
 * :doc:`Electric Current<hardware/sensor/electric_current>`
-* :doc:`Light/Luminosity<hardware/sensor/light_luminosity>` (CdS, TSL2561, TSL2591)
+* :doc:`Light/Luminosity<hardware/sensor/light_luminosity>` - a measure of the intensity of light that hits a surface (TSL2561, TSL2591, CdS)
 * :doc:`Liquid Flow <hardware/sensor/liquid_flow>`
 * :doc:`Liquid Level <hardware/sensor/liquid_level>`
-* :doc:`Liquid pH<hardware/sensor/liquid_ph>` - acidity or basicity of an aqueous solution (Atlas Scientific pH Kit)
+* :doc:`Liquid pH<hardware/sensor/liquid_ph>` - acidity or basicity of an aqueous solution (AS pH Kit)
 * :doc:`Soil Moisture<hardware/sensor/soil_moisture>` - the water content in soil (HygroMeter)
-* :doc:`Temperature<hardware/sensor/temperature>` (DHT11, DHT22, HTU19D, TMP36, DS18)
+* :doc:`Temperature<hardware/sensor/temperature>` - a comparative objective measure of hot and cold (DHT11, DHT22, HTU19D, DS18B20, TMP36)
+
+Physical Actuators
+----------------
+
+* :doc:`Electric Switchich <hardware/actuator/electric_switch>`
+* :doc:`Electric Power Modulation <hardware/actuator/electric_modulation>`
+* :doc:`OLED Display <hardware/actuator/display_oled>`
 
 Contribution
 ===========

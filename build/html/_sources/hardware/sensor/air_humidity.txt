@@ -61,9 +61,8 @@ More information
 Where to buy
 ----------------
 
-* http://www.adafruit.com/product/1899 HTU21D-F $15
-* https://www.sparkfun.com/products/12064 HTU21D $15
-
+* http://www.adafruit.com/product/1899 $15
+* https://www.sparkfun.com/products/12064 $15
 
 More information
 ================

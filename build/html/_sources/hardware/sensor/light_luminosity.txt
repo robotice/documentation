@@ -3,6 +3,8 @@
 Measuring Light/Luminosity
 ==========================
 
+The lux is the SI unit of illuminance and luminous emittance, measuring luminous flux per unit area. It is equal to one lumen per square metre. In photometry, this is used as a measure of the intensity, as perceived by the human eye, of light that hits or passes through a surface. It is analogous to the radiometric unit watts per square metre, but with the power at each wavelength weighted according to the luminosity function, a standardized model of human visual brightness perception. In English, "lux" is used in both singular and plural.
+
 TSL2591 - I2C Luminosity Sensor
 ===============================
 

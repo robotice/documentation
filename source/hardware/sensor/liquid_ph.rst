@@ -26,7 +26,6 @@ Where to buy
 * http://www.atlas-scientific.com/product_pages/kits/ph-kit.html $130
 * https://www.sparkfun.com/products/10972 $106
 
-
 More information
 ================
 

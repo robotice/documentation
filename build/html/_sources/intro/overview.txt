@@ -1,8 +1,15 @@
-=================
-Robotice Overview
-=================
+=====================
+Architecture Overview
+=====================
 
-Architecture
-------
+Agent System Architecture
+=========================
 
 .. image :: img/architecture.png
+
+
+Control System Architecture
+===========================
+
+
+

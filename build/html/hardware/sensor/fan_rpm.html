@@ -48,6 +48,34 @@
             
   <div class="section" id="measuing-fan-rpms">
 <h1>Measuing Fan RPMs<a class="headerlink" href="#measuing-fan-rpms" title="Permalink to this headline">¶</a></h1>
+<p>There are 3 kinds of fans:</p>
+<ul class="simple">
+<li>2 wire fans are just power connections</li>
+<li>3 wire fans have an extra OUTPUT from the fan to tell the (generally motherboard) what speed the fan is turning.</li>
+<li>4 wire fans have that same output as 3-wire fans, but also a PWM input pin that you can drive with a regular old pwm output pin from an arduino (or motherboard).</li>
+</ul>
+<div class="section" id="wire-fans-gpio-sensor">
+<h2>3 Wire Fans - GPIO  Sensor<a class="headerlink" href="#wire-fans-gpio-sensor" title="Permalink to this headline">¶</a></h2>
+<p>...</p>
+<p>!http://i.stack.imgur.com/NprvN.jpg!</p>
+<div class="section" id="more-information">
+<h3>More information<a class="headerlink" href="#more-information" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="http://electronics.stackexchange.com/questions/79707/3-wire-fan-tach-why-using-only-one-wire-gives-a-signal">http://electronics.stackexchange.com/questions/79707/3-wire-fan-tach-why-using-only-one-wire-gives-a-signal</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="wire-fans-gpio-sensor-pwm-actuator">
+<h2>4 Wire Fans - GPIO Sensor/PWM Actuator<a class="headerlink" href="#wire-fans-gpio-sensor-pwm-actuator" title="Permalink to this headline">¶</a></h2>
+<p>...</p>
+<div class="section" id="id1">
+<h3>More information<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="http://electronics.stackexchange.com/questions/62324/arduino-controlled-pwm-pc-fan">http://electronics.stackexchange.com/questions/62324/arduino-controlled-pwm-pc-fan</a></li>
+<li><a class="reference external" href="http://formfactors.org/developer/specs/4_Wire_PWM_Spec.pdf">http://formfactors.org/developer/specs/4_Wire_PWM_Spec.pdf</a></li>
+</ul>
+</div>
+</div>
 </div>
 
 
@@ -55,7 +83,22 @@
         </div>
       </div>
       <div class="sphinxsidebar">
-        <div class="sphinxsidebarwrapper"><h3>Related Topics</h3>
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Measuing Fan RPMs</a><ul>
+<li><a class="reference internal" href="#wire-fans-gpio-sensor">3 Wire Fans - GPIO  Sensor</a><ul>
+<li><a class="reference internal" href="#more-information">More information</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#wire-fans-gpio-sensor-pwm-actuator">4 Wire Fans - GPIO Sensor/PWM Actuator</a><ul>
+<li><a class="reference internal" href="#id1">More information</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3>Related Topics</h3>
 <ul>
   <li><a href="../../index.html">Documentation overview</a><ul>
   </ul></li>

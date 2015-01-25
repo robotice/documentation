@@ -12,14 +12,16 @@ The sensor comes with three wires: red (5-24VDC power), black (ground) and yello
 
 .. image :: /_static/img/device/liquid_flow_plastic.jpg
 
-**10$**
+Where to buy
+----------------
+
+* http://www.adafruit.com/products/828 $10
 
 Brass 1/2" - GPIO Liquid Flow Meter
-=====================================
-
-**$24.95**
+===================================
 
 .. image :: /_static/img/device/liquid_flow_brass.jpg
 
-.. [ADA]_  http://www.adafruit.com/products/828
-.. [ADA1]_  http://www.adafruit.com/products/833
+Where to buy
+----------------
+* http://www.adafruit.com/products/833 $25
