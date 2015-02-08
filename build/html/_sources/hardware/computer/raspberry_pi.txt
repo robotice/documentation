@@ -1,6 +1,0 @@
-
-=================
-Raspberry Pi
-=================
-
-.. image :: /_static/img/device/raspberry_pi.jpg

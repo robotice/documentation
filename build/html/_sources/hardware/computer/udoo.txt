@@ -1,9 +1,0 @@
-
-=================
-UDOO
-=================
-
-.. image :: /_static/img/device/udoo.jpg
-
-
-http://www.udoo.org/

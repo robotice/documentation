@@ -55,7 +55,7 @@ Physical Sensors
 * :doc:`Electric Button<hardware/sensor/electric_button>`
 * :doc:`Electric Current<hardware/sensor/electric_current>`
 * :doc:`Light/Luminosity<hardware/sensor/light_luminosity>` - a measure of the intensity of light that hits a surface (TSL2561, TSL2591, CdS)
-* :doc:`Liquid Flow <hardware/sensor/liquid_flow>`
+* :doc:`Liquid Flow <hardware/sensor/liquid_flow>` - quantification of bulk fluid movement (1/2" Vavles)
 * :doc:`Liquid Level <hardware/sensor/liquid_level>`
 * :doc:`Liquid pH<hardware/sensor/liquid_ph>` - acidity or basicity of an aqueous solution (AS pH Kit)
 * :doc:`Soil Moisture<hardware/sensor/soil_moisture>` - the water content in soil (HygroMeter)
