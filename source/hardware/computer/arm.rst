@@ -21,7 +21,7 @@ The Raspberry Pi is a series of credit card-sized single-board computers develop
    Revision B+ (4x CPU, 1024MB RAM)
 
 More infromation
-------------
+----------------
 
 
 Where to buy
@@ -33,7 +33,7 @@ BeagleBone Black
 ================
 
 .. image :: /_static/img/device/beaglebone.jpg
-
+   :scale: 50 %
 
 Available pins
 --------------
@@ -54,14 +54,15 @@ Where to buy
 * http://cz.farnell.com/element14/bbone-black-4g/beaglebone-black-rev-c-cortex/dp/2422228  - BeagleBone Black REV C - 1200Kc
 
 UDOO
-=================
+====
 
 .. image :: /_static/img/device/udoo.jpg
+   :scale: 50 %
 
+More information
+----------------
 
 * http://www.udoo.org/
 
 Odroid C1
-================
-
-...
+=========
