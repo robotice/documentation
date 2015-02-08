@@ -8,10 +8,16 @@ Raspberry Pi
 
 .. image :: /_static/img/device/raspberry_pi.jpg
 
+Where to buy
+------------
+
+* http://eshop.minidroid.cz/raspberry-pi/335-raspberry-pi-2-model-b-1gb.html - R-Pi 2 Model B 1GB - 1200Kc
+
 BeagleBone Black
 ================
 
 .. image :: /_static/img/device/beaglebone.jpg
+
 
 Available pins
 --------------
@@ -25,6 +31,11 @@ Available pins
 * 4x UART
 * 8x PWM
 * A/D Converter
+
+Where to buy
+------------
+
+* http://cz.farnell.com/element14/bbone-black-4g/beaglebone-black-rev-c-cortex/dp/2422228  - BeagleBone Black REV C - 1200Kc
 
 UDOO
 =================
