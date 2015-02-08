@@ -12,6 +12,7 @@ The eTape Liquid Level Sensor is a solid-state sensor with a resistive output th
 This is a very unique sensor, we haven't seen anything else that is affordable and accurate for measuring liquid level. This sensor seems like it would be a handy addition to an hydroponics, aquarium, fountain or pool controller, or perhaps measuring a rain tube. 
 
 .. image :: /_static/img/device/etape_liquid_level.jpg
+   :scale: 50 %
 
 More information
 ----------------
@@ -30,6 +31,7 @@ SainSmart Water Sensor
 Water sensor brick is designed for water detection, which can be widely used in sensing the rainfall, water level, even the liquate leakage. The brick is mainly comprised of three parts: An Electronic brick connector, a 1 MΩ resistor, and several lines of bare conducting wires.
 
 .. image :: /_static/img/device/sainsmart_water.jpg
+   :scale: 50 %
 
 More information
 ----------------

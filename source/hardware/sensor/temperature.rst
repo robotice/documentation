@@ -22,6 +22,11 @@ Where to buy
 
 * http://www.adafruit.com/products/1782 $5
 
+BMP180 - I2C Temperature and Pressure Sensor
+==================================
+
+See Air pressure chapter
+
 DS18B20 - GPIO Temperature Sensor 
 =================================
 

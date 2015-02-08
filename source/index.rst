@@ -50,7 +50,7 @@ Physical Sensors
 ----------------
 
 * :doc:`Air Humidity<hardware/sensor/air_humidity>` - ratio of water vapor pressure to the equilibrium vapor pressure of water (DHT11, DHT22, HTU19D)
-* :doc:`Air Pressure<hardware/sensor/air_pressure>` (BMP)
+* :doc:`Air Pressure<hardware/sensor/air_pressure>` (BMP180)
 * :doc:`Distance<hardware/sensor/distance>`
 * :doc:`Electric Button<hardware/sensor/electric_button>`
 * :doc:`Electric Current<hardware/sensor/electric_current>`
@@ -69,8 +69,37 @@ Physical Actuators
 * :doc:`OLED Display <hardware/actuator/display_oled>`
 
 Contribution
-===========
+============
 
 * :doc:`Source code <contrib/git>`
 * :doc:`How to add support for new device/sensor/actuator <contrib/new_device>`
 * :doc:`Contributors <contrib/contributors>`
+
+Table of Content
+================
+
+.. toctree::
+   :maxdepth: 2
+   :numbered:
+
+   intro/overview
+   intro/screenshot
+   hardware/computer/arm
+   hardware/computer/intel
+   hardware/computer/usb
+   hardware/sensor/air_humidity
+   hardware/sensor/air_pressure
+   hardware/sensor/distance
+   hardware/sensor/electric_button
+   hardware/sensor/electric_current
+   hardware/sensor/light_luminosity
+   hardware/sensor/liquid_flow
+   hardware/sensor/liquid_level
+   hardware/sensor/liquid_ph
+   hardware/sensor/soil_moisture
+   hardware/sensor/temperature
+   hardware/actuator/electric_switch
+   hardware/actuator/electric_modulation
+   hardware/actuator/display_oled
+   contrib/git
+   contrib/new_device

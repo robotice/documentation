@@ -4,9 +4,25 @@ Single-board ARM Computers
 ==========================
 
 Raspberry Pi
-=================
+============
 
-.. image :: /_static/img/device/raspberry_pi.jpg
+The Raspberry Pi is a series of credit card-sized single-board computers developed in the UK by the Raspberry Pi Foundation with the intention of promoting the teaching of basic computer science in schools.
+
+.. figure:: /_static/img/device/raspberry_pi.jpg
+   :scale: 50 %
+   :alt: Revision B+ (4x CPU, 1024MB RAM)
+
+   Revision B (1x CPU, 512MB RAM)
+
+.. figure:: /_static/img/device/raspberry_pi_2.jpg
+   :scale: 50 %
+   :alt: Revision B+ (4x CPU, 1024MB RAM)
+
+   Revision B+ (4x CPU, 1024MB RAM)
+
+More infromation
+------------
+
 
 Where to buy
 ------------

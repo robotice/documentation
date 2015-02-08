@@ -9,6 +9,7 @@ Atlas Scientific pH Kit - I2C pH Sensor
 =======================================
 
 .. image :: /_static/img/device/atlas_scientific_ph_kit.jpg
+   :scale: 50 %
 
 The Atlas Scientific pH Kit comes with everything you need to get your laboratory grade embedded pH system up and running.
 

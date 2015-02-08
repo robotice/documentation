@@ -3,7 +3,7 @@
 Measuring Light/Luminosity
 ==========================
 
-The lux is the SI unit of illuminance and luminous emittance, measuring luminous flux per unit area. It is equal to one lumen per square metre. In photometry, this is used as a measure of the intensity, as perceived by the human eye, of light that hits or passes through a surface. It is analogous to the radiometric unit watts per square metre, but with the power at each wavelength weighted according to the luminosity function, a standardized model of human visual brightness perception. In English, "lux" is used in both singular and plural.
+The lux is the SI unit of illuminance and luminous emittance, measuring luminous flux per unit area. It is equal to one lumen per square metre. In photometry, this is used as a measure of the intensity, as perceived by the human eye, of light that hits or passes through a surface. It is analogous to the radiometric unit watts per square metre, but with the power at each wavelength weighted according to the luminosity function, a standardized model of human visual brightness perception.
 
 TSL2591 - I2C Luminosity Sensor
 ===============================
@@ -15,6 +15,7 @@ The best part of this sensor is that it contains both infrared and full spectrum
 This board/chip uses I2C 7-bit address 0x29 (fixed).
 
 .. image :: /_static/img/device/tls2591.jpg
+   :scale: 50 %
 
 More information
 ----------------
@@ -36,6 +37,7 @@ The sensor has a digital (i2c) interface. You can select one of three addresses 
 This board/chip uses I2C 7-bit addresses 0x39, 0x29, 0x49, selectable with jumpers.
 
 .. image :: /_static/img/device/tls2561.jpg
+   :scale: 50 %
 
 More information
 ----------------
@@ -56,6 +58,7 @@ CdS cells are little light sensors. As the squiggly face is exposed to more ligh
 To use, connect one side of the photo cell (either one, its symmetric) to power (for example 5V) and the other side to your microcontroller's analog input pin. Then connect a 10K pull-down resistor from that analog pin to ground. The voltage on the pin will be 2.5V or higher when its light out and near ground when its dark.
 
 .. image :: /_static/img/device/cds.jpg
+   :scale: 50 %
 
 More information
 ----------------
@@ -63,6 +66,6 @@ More information
 * https://learn.adafruit.com/photocells/using-a-photocell
 
 Where to buy
-----------------
+------------
 
 * http://www.adafruit.com/products/161 $1
